@@ -1,0 +1,55 @@
+{
+  "projectName": "gremlin",
+  "projectOwner": "fair-acc",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributorsPerLine": 7,
+  "contributorsSortAlphabetically": true,
+  "contributorTemplate": "<a href=\"<%= contributor.profile %>\"><img src=\"<%= contributor.avatar_url %>\" width=\"<%= options.imageSize %>px;\" alt=\"\"/><br /><sub><b><%= contributor.name %></b></sub></a>",
+  "wrapperTemplate": "\n<table>\n  <tbody><%= bodyContent %>  </tbody>\n<%= tableFooterContent %></table>\n\n",
+  "linkToUsage": true,
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "RalphSteinhagen",
+      "name": "Ralph J. Steinhagen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46007894?v=4",
+      "profile": "https://github.com/RalphSteinhagen",
+      "contributions": [
+        "code",
+        "design",
+        "doc",
+        "review"
+      ]
+    },
+    {
+      "login": "wirew0rm",
+      "name": "Alexander Krimm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1202371?v=4",
+      "profile": "https://github.com/wirew0rm",
+      "contributions": [
+        "code",
+        "design",
+        "review"
+      ]
+    },
+    {
+      "login": "drslebedev",
+      "name": "Simon Lebedev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25366186?v=4",
+      "profile": "https://github.com/drslebedev",
+      "contributions": [
+        "code",
+        "design",
+        "review"
+      ]
+    }
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular"
+}

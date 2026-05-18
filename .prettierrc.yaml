@@ -1,0 +1,8 @@
+# Prettier configuration — https://prettier.io/docs/en/options.html
+
+# Keep author-chosen line breaks in prose; don't force new wraps and don't
+# collapse existing breaks. Lets long Markdown lines stay long.
+proseWrap: preserve
+
+# High bound so Prettier doesn't reflow embedded code blocks or tables either.
+printWidth: 200

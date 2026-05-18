@@ -1,0 +1,167 @@
+[data-md-color-scheme="default"] .gremlin-hero--dark,
+[data-md-color-scheme="default"] .gremlin-logo--dark,
+[data-md-color-scheme="slate"]   .gremlin-hero--light,
+[data-md-color-scheme="slate"]   .gremlin-logo--light {
+  display: none;
+}
+
+/* Centre the landing-page hero (square logo mark) and constrain its width. */
+.gremlin-hero {
+  display: block;
+  margin: 1.25rem auto 1.5rem;
+  max-width: min(240px, 55%);
+  height: auto;
+}
+
+/* Borderless, full-width image grids (EMI examples, facility photos). */
+.emi-grid {
+  width: 100%;
+  table-layout: fixed;
+}
+.emi-grid,
+.emi-grid td {
+  border: none !important;
+  padding: 3px !important;
+}
+.emi-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.eu-funding,
+.eu-funding td,
+.eu-funding th {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+  border-color: #cccccc !important;
+}
+
+.eu-funding a,
+.eu-funding a:visited {
+  color: #003399 !important;  /* EU corporate blue */
+  text-decoration: underline;
+}
+
+.eu-funding img {
+  background-color: #ffffff !important;
+}
+
+/* Light/dark switching for inline figures (infographics), per palette scheme. */
+.gremlin-figure {
+  display: block;
+  margin: 0.75rem auto 1rem;
+  height: auto;
+}
+[data-md-color-scheme="default"] .gremlin-figure--dark { display: none !important; }
+[data-md-color-scheme="slate"]   .gremlin-figure--light { display: none !important; }
+
+/* Badge stripe — used both for the in-page placement on index.md and the
+   top-of-page toolbar (overrides/main.html). Flexbox wraps gracefully on
+   narrow viewports; line-height 0 tightens vertical alignment around the
+   shield SVGs (which carry their own internal padding). */
+.gremlin-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.75rem auto 1rem;
+  line-height: 0;
+}
+.gremlin-badges a { display: inline-flex; text-decoration: none; }
+.gremlin-badges img { vertical-align: middle; }
+
+/* Material's default `.md-header__source` is `display: block` with a fixed
+   width of ~11.7rem, sized for a single repo-link line. With our additional
+   mini-badge grid inside the same wrapper we need a flex row so the grid sits
+   on the left and the `fair-acc/gremlin` link sits on the right, both
+   vertically centred against the header height. */
+.md-header__source {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: auto;
+  max-width: none;
+}
+
+/* Header badge stack — rendered into Material's `.md-header__source` wrapper
+   via overrides/partials/source.html, immediately to the left of the existing
+   `fair-acc/gremlin` repo link. Two items stacked vertically (no frame /
+   border / background): the DOI shield, then the EU flag + iRIS-grant label.
+   Each item is sized so the pair fits within Material's ~38 px header height
+   with breathing room. */
+.gremlin-header-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  margin: 0 0.7rem 0 0;
+}
+.gremlin-header-badges img {
+  display: block;
+  height: 16px;
+  width: auto;
+}
+
+/* EU-flag + iRIS-grant label — flag on the left, small uppercase grant ID on
+   the right, inheriting the Material header's foreground colour. */
+.gremlin-eu-funding {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: var(--md-primary-bg-color);
+  line-height: 1;
+}
+.gremlin-eu-label {
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* Header logo — sized to fill the header bar. Material's header is ~2.4rem
+   tall (set by the title and search field), so the mark is set to 2.3rem with
+   zero wrapper padding to nearly fill that height while keeping the bar at its
+   standard, compact height. */
+.md-header__button.md-logo {
+  padding: 0;
+}
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: auto;
+  height: 2.3rem;
+}
+
+/* Protect the `fair-acc/gremlin` source link from collapsing when the badge
+   stack + search input compete for header width — Material's defaults apply a
+   `max-width: calc(100% - 1.2rem)` + `text-overflow: ellipsis` to the repo
+   name, which is what causes the visible "fair-acc/gr…" truncation. The
+   overrides below lift both constraints and prevent the source link from
+   shrinking. */
+.md-header__source .md-source { flex-shrink: 0; white-space: nowrap; }
+.md-header__source .md-source__repository {
+  max-width: none;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+/* Hide the badge stack on narrow viewports — the Material header collapses
+   there and only the hamburger + search + repo link fit comfortably. */
+@media (max-width: 76.234375em) {
+  .gremlin-header-badges { display: none; }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

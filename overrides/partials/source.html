@@ -1,0 +1,29 @@
+{# Material's `partials/source.html` overridden to add two shields.io badges
+   (DOI + EU iRIS, same rendering as in README.md) immediately to the left of
+   the existing `fair-acc/gremlin` repo link. Styling: docs/stylesheets/extra.css
+   (.gremlin-header-badges / .md-header__source).
+
+   Note: this replaces Material's default source.html entirely. If you later
+   enable features that the default partial handles (e.g. `repo_stars_count`,
+   `repo_forks_count`, release-version badge), reinstate the defaults by
+   deleting this file and placing the badges elsewhere instead. #}
+
+<div class="gremlin-header-badges" aria-label="DOI and EU funding">
+  <a href="https://zenodo.org/communities/101275935/" title="DOI — pending first release; replace with the Zenodo concept DOI after first release">
+    <img src="https://img.shields.io/badge/DOI-pending%20first%20release-orange.svg" alt="DOI: pending first release">
+  </a>
+  <a class="gremlin-eu-funding" href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43108390/101275935/HORIZON" title="EU Horizon Europe — iRIS, Grant Agreement No. 101275935">
+    <img class="gremlin-eu-flag" src="{{ 'img/Flag_of_Europe.svg' | url }}" alt="EU Horizon Europe">
+    <span class="gremlin-eu-label">iRIS&nbsp;101275935</span>
+  </a>
+</div>
+
+<a href="{{ config.repo_url }}" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    {% set icon = config.theme.icon.repo or "fontawesome/brands/git-alt" %}
+    {% include ".icons/" ~ icon ~ ".svg" %}
+  </div>
+  <div class="md-source__repository">
+    {{ config.repo_name }}
+  </div>
+</a>

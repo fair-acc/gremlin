@@ -1,0 +1,110 @@
+site_name: GREMLIN
+site_description: >
+  A non-intrusive, facility-scale diagnostic layer that turns the
+  electromagnetic noise electrical devices emit into actionable energy and
+  maintenance information — from a few high-bandwidth measurement points.
+site_url: https://fair-acc.github.io/gremlin/
+repo_url: https://github.com/fair-acc/gremlin
+repo_name: fair-acc/gremlin
+edit_uri: edit/main/docs/
+
+copyright: >
+  © 2026 GSI Helmholtz Centre for Heavy Ion Research and
+  FAIR, Facility for Antiproton and Ion Research in Europe — and contributors.
+  Documentation licensed under
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a>.
+
+docs_dir: docs
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: img/GREMLIN_logo_small.svg        # default; overrides/partials/logo.html switches light/dark
+  favicon: img/GREMLIN_logo_small.svg
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link        # sync tabbed code blocks across the page
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: fair-acc
+      repo: gremlin
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: false
+      print_page_title: "GREMLIN — full documentation"
+      add_print_site_banner: false
+      add_full_urls: true
+      enumerate_headings: false
+      enumerate_figures: false
+      add_table_of_contents: true
+      toc_title: "Contents"
+      add_cover_page: true
+      path_to_pdf: ""
+
+nav:
+  - Home: index.md
+  - How it works: how-it-works.md
+  - EMI & compliance: emi-and-compliance.md
+  - What it provides: what-it-provides.md
+  - References: references.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fair-acc/gremlin
+    - icon: fontawesome/solid/scale-balanced
+      link: https://zenodo.org/communities/101275935/
+      name: iRIS on Zenodo

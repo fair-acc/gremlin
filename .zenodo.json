@@ -1,0 +1,61 @@
+{
+  "title": "GREMLIN — GReen Energy Monitoring for Large INfrastructure",
+  "description": "GREMLIN is a non-intrusive, facility-scale diagnostic layer that turns the electromagnetic (EMI) signatures electrical devices emit into actionable information — disaggregating energy use and flagging equipment degradation — from a few high-bandwidth measurement points instead of per-device instrumentation. It couples single-point sensing with non-intrusive load monitoring (NILM) and a learned classifier benchmarked against classical methods, exchanged in the portable ONNX format on the GNU Radio 4.0 streaming runtime. GREMLIN is developed under the EU Horizon Europe iRIS project (Grant Agreement No. 101275935).",
+  "license": {
+    "id": "LGPL-3.0-or-later"
+  },
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Steinhagen, Ralph J.",
+      "affiliation": "GSI Helmholtzzentrum für Schwerionenforschung / FAIR",
+      "orcid": "0009-0009-8537-7029"
+    },
+    {
+      "name": "Krimm, Alexander",
+      "affiliation": "GSI Helmholtzzentrum für Schwerionenforschung",
+      "orcid": "0000-0003-0804-756X"
+    },
+    {
+      "name": "Lebedev, Simon",
+      "affiliation": "GSI Helmholtzzentrum für Schwerionenforschung",
+      "orcid": "0009-0006-8329-990X"
+    },
+    {
+      "name": "Welker, Horst",
+      "affiliation": "GSI Helmholtzzentrum für Schwerionenforschung"
+    },
+    {
+      "name": "GSI/FAIR GREMLIN contributors"
+    }
+  ],
+  "keywords": [
+    "energy monitoring",
+    "non-intrusive load monitoring",
+    "NILM",
+    "power disaggregation",
+    "RF fingerprinting",
+    "EMI",
+    "anomaly detection",
+    "predictive maintenance",
+    "digital twin",
+    "observability",
+    "GNU Radio 4.0",
+    "signal processing",
+    "research infrastructure",
+    "Horizon Europe",
+    "iRIS"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/fair-acc/pulsed-power-ml",
+      "relation": "continues",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43108390/101275935/HORIZON",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

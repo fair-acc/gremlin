@@ -1,0 +1,9 @@
+# Documentation build dependencies for the MkDocs Material site
+# deployed at https://fair-acc.github.io/gremlin/
+mkdocs-material>=9.5,<10
+pymdown-extensions>=10
+
+# Adds a /print_page/ route that concatenates every nav page into one
+# printable HTML page — used to produce a single-page PDF of the site
+# via the browser's "Save as PDF".
+mkdocs-print-site-plugin>=2.4

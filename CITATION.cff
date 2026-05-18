@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+title: "GREMLIN — GReen Energy Monitoring for Large INfrastructure"
+message: >
+  If you use this software or its accompanying documentation, please cite it using the metadata in this file.
+type: software
+license: LGPL-3.0-or-later WITH LGPL-3.0-linking-exception
+# TODO: set repository-code once the canonical public repository is published.
+repository-code: "https://github.com/fair-acc/gremlin"
+# TODO: replace with the Zenodo concept DOI after first release.
+# doi: "10.5281/zenodo.XXXXXXX"
+keywords:
+  - energy monitoring
+  - non-intrusive load monitoring
+  - NILM
+  - power disaggregation
+  - RF fingerprinting
+  - EMI
+  - anomaly detection
+  - predictive maintenance
+  - digital twin
+  - observability
+  - GNU Radio 4.0
+  - signal processing
+  - research infrastructure
+  - Horizon Europe
+  - iRIS
+authors:
+  - family-names: Steinhagen
+    given-names: Ralph J.
+    affiliation: "GSI Helmholtzzentrum für Schwerionenforschung"
+    orcid: "https://orcid.org/0009-0009-8537-7029"
+  - family-names: Krimm
+    given-names: Alexander
+    affiliation: "GSI Helmholtzzentrum für Schwerionenforschung"
+    orcid: "https://orcid.org/0000-0003-0804-756X"
+  - family-names: Lebedev
+    given-names: Simon
+    affiliation: "GSI Helmholtzzentrum für Schwerionenforschung"
+    orcid: "https://orcid.org/0009-0006-8329-990X"
+  - family-names: Welker
+    given-names: Horst
+    affiliation: "GSI Helmholtzzentrum für Schwerionenforschung"
+  - name: "GSI/FAIR GREMLIN contributors"
+identifiers:
+  - type: other
+    value: "EU Horizon Europe Grant Agreement No. 101275935 (iRIS)"
+    description: >
+      Funding identifier — iRIS (Intelligent Research Infrastructure
+      Sustainability), the parent EU Horizon Europe project under which
+      GREMLIN is developed.
+references:
+  - type: software
+    title: "pulsed-power-ml"
+    repository-code: "https://github.com/fair-acc/pulsed-power-ml"
+    notes: >
+      Earlier proof-of-concept exploring power-disaggregation and
+      machine-learning techniques relevant to GREMLIN.

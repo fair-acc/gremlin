@@ -1,10 +1,6 @@
 ## GREMLIN<br>— GReen Energy Monitoring for Large INfrastructure
 
-<!-- DOI badge is a placeholder until the first Zenodo release. Replace with one of:
-       static  : [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
-       dynamic : [![DOI](https://zenodo.org/badge/REPOID.svg)](https://zenodo.org/badge/latestdoi/REPOID)
-     REPOID is the numeric GitHub repo ID (Settings → General → Repository ID). -->
-[![DOI](https://img.shields.io/badge/DOI-pending%20first%20release-orange.svg)](https://zenodo.org/communities/101275935/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20520246.svg)](https://doi.org/10.5281/zenodo.20520246)
 [![Code: LGPL-3.0+linking-exception](https://img.shields.io/badge/code-LGPL--3.0%2Blinking--exception-blue.svg)](LICENSES/LGPL-3.0-or-later.txt)
 [![Docs: CC-BY-SA-4.0](https://img.shields.io/badge/docs-CC--BY--SA--4.0-lightgrey.svg)](LICENSES/CC-BY-SA-4.0.txt)
 [![EU Horizon Europe — iRIS 101275935](https://img.shields.io/badge/EU%20Horizon%20Europe-iRIS%20101275935-003399.svg)](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43108390/101275935/HORIZON)

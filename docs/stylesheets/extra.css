@@ -121,6 +121,30 @@
   white-space: nowrap;
 }
 
+/* DOI chip — compact two-tone badge drawn in CSS (no external image, so it
+   renders in the header, where the Zenodo badge SVG does not embed). Shows a
+   shortened "zenodo.NNN" label; links to the full concept DOI. */
+.gremlin-doi {
+  display: inline-flex;
+  align-items: stretch;
+  text-decoration: none;
+  line-height: 1;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.gremlin-doi-k,
+.gremlin-doi-v {
+  padding: 2px 5px;
+  display: inline-flex;
+  align-items: center;
+}
+.gremlin-doi-k { background: #4d4d4d; color: #fff; }
+.gremlin-doi-v { background: #007ec6; color: #fff; }
+
 /* Header logo — sized to fill the header bar. Material's header is ~2.4rem
    tall (set by the title and search field), so the mark is set to 2.3rem with
    zero wrapper padding to nearly fill that height while keeping the bar at its

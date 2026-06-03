@@ -12,7 +12,7 @@
   url          = {https://github.com/fair-acc/gremlin},
   note         = {Developed under EU Horizon Europe Grant Agreement
                   No.\ 101275935 (iRIS).},
-  % doi       = {TODO: Zenodo concept DOI after first release}
+  doi          = {10.5281/zenodo.20520246}
 }
 
 @misc{iris_project,

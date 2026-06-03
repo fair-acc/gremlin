@@ -4,10 +4,8 @@ message: >
   If you use this software or its accompanying documentation, please cite it using the metadata in this file.
 type: software
 license: LGPL-3.0-or-later WITH LGPL-3.0-linking-exception
-# TODO: set repository-code once the canonical public repository is published.
 repository-code: "https://github.com/fair-acc/gremlin"
-# TODO: replace with the Zenodo concept DOI after first release.
-# doi: "10.5281/zenodo.XXXXXXX"
+doi: "10.5281/zenodo.20520246"
 keywords:
   - energy monitoring
   - non-intrusive load monitoring

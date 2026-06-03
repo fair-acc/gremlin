@@ -35,11 +35,11 @@ and *MIL-STD-461* (method *CE102*) are used in the United States. Each caps the 
 may inject back onto its supply over roughly **150 kHz – 30 MHz**, split by operating environment (**Class A** industrial versus **Class B** residential).
 
 <div align="center">
-<img width="75%" class="gremlin-figure" src="../photos/EMI_limits_overview.png" alt="Conducted-emission limit envelopes — mains-terminal disturbance voltage in dBµV versus frequency — for CISPR 11 Class A and Class B, FCC Part 15 Class A and Class B, and MIL-STD-461G CE102, for quasi-peak and average detectors." style="width:92%; max-width:900px; background:#ffffff;">
+<img width="75%" class="gremlin-figure" src="../photos/EMI_limits_overview_full.png" alt="Conducted-emission limit envelopes — mains-terminal disturbance voltage in dBµV versus frequency — for CISPR 11 Class A and Class B, FCC Part 15 Class A and Class B, and MIL-STD-461G CE102, for quasi-peak and average detectors." style="width:92%; max-width:900px; background:#ffffff;">
 </div>
 
 *Indicative conducted-emission limit envelopes (mains-terminal disturbance voltage, dBµV) across the common regimes. 
-Whatever limit applies, it *bounds* the residual emission — it does not remove it; GREMLIN reads precisely what remains underneath.*
+Whatever limit applies, it *bounds* the residual emission — it does not remove it; GREMLIN reads precisely what remains underneath and above the thermal noise floor limit.*
 
 ## 2. Conducted versus radiated propagation
 

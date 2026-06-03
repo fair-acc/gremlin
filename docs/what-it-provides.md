@@ -20,36 +20,36 @@ device class, by operating state, and by time of day, operations can act on them
 sequence is deliberate — GREMLIN reports, operations decides and acts. The system is a *diagnostic layer*, not an energy
 controller.
 
-  2. Spot efficiency drift in ageing converters
-  Comparing each device's RF/EMI signature against its measured power consumption over time exposes power converters whose
-  *conversion efficiency* is degrading silently. Recovering a few percent on a multi-megawatt-class load is, in order of magnitude,
-  **~ 20 GWh per year** at a facility the size of FAIR — the kind of number that pays back the rest of the diagnostic on its own,
-  *if* the false-positive rate is low enough for operations to act on the alerts. That conditional is exactly what the iRIS
-  benchmarking deliverable quantifies.
+ 2. **Spot efficiency drifts** in ageing converters
+ Comparing each device's RF/EMI signature against its measured power consumption over time exposes power converters whose
+ *conversion efficiency* is degrading silently. Recovering a few percent on a multi-megawatt-class load is, in order of magnitude,
+ **~ 20 GWh per year** at a facility the size of FAIR — the kind of number that pays back the rest of the diagnostic on its own,
+ *if* the false-positive rate is low enough for operations to act on the alerts. That conditional is exactly what the iRIS
+ benchmarking deliverable quantifies.
 
-  3. Catch faults *before* they go hard — availability
-  The same single-point measurement supports early detection of device-level degradation, so maintenance can be **proactive and grouped**
-  — scheduled into existing shutdowns, maintenance windows, and commissioning gaps — in place of reactive responses to single-point failures. 
-  The economic case is strongest in facilities that cannot be cycled rapidly: cryogenic plant, RF systems, thermal infrastructure, 
-  hysteresis-limited magnets. There, a hard fault means the place idles while still drawing megawatts, and the cost of lost beam time 
-  at GSI's SIS18 is on the order of **120 kEUR per day of lost science**. Fault-prevention therefore pays on *both* axes at once
-  — saved kEUR of lost science *and* avoided MWh burned during the idle window. The physical drift that makes this early-warning possible
-  is summarised in [Ageing as signature](how-it-works.md#ageing-as-rf-signature).
+ 3. **Catch faults *before* they are hard faults** — availability
+ The same single-point measurement supports early detection of device-level degradation, so maintenance can be **proactive and grouped**
+ — scheduled into existing shutdowns, maintenance windows, and commissioning gaps — in place of reactive responses to single-point failures. 
+ The economic case is strongest in facilities that cannot be cycled rapidly: cryogenic plant, RF systems, thermal infrastructure, 
+ hysteresis-limited magnets. There, a hard fault means the place idles while still drawing megawatts, and the cost of lost beam time 
+ at GSI's SIS18 is on the order of **120 kEUR per day of lost science**. Fault-prevention therefore pays on *both* axes at once
+ — saved kEUR of lost science *and* avoided MWh burned during the idle window. The physical drift that makes this early-warning possible
+ is summarised in [Ageing as signature](how-it-works.md#ageing-as-rf-signature).
 
-  4. Further upsides — secondary outputs from the same spectral view
-  The same single-sensor disaggregation supports several second-order benefits that do not require an additional measurement:
+ 4. **Further upsides** — secondary outputs from the same spectral view
+ The same single-sensor disaggregation supports several second-order benefits that do not require an additional measurement:
 
-  - **Unaccounted-for loads and devices** — the analysis flags power drawn on the network that does *not* match any known device
-    signature. The disclosed fact is that *something* is consuming power matching no known fingerprint, not what it is doing
-    internally. (Open scope of how this is used in practice is best discussed off-line.)
-  - **Grid and emission-compliance monitoring** — exceeding the network operator's emission or power-quality tolerances carries
-    operational or contractual cost, and the same high-bandwidth spectral view supports staying inside them. GREMLIN rides on a
-    problem the facility already owns.
-  - **Avoided per-device metering — capital, calibration, and embodied carbon.** Instrumenting every load individually multiplies
-    cabling, calibration, network endpoints, embedded firmware, and the embodied-carbon footprint of all the added electronics.
-    GREMLIN avoids that.
-  - **Maintenance-logistics dividends** — just-in-time spares, remote triage of which device is failing before sending a
-    technician, and deferred replacement-capex follow from knowing which device is degrading well before it fails.
+    * **Unaccounted-for loads and devices** — the analysis flags power drawn on the network that does *not* match any known device
+      signature. The disclosed fact is that *something* is consuming power matching no known fingerprint, not what it is doing
+      internally. (Open scope of how this is used in practice is best discussed off-line.)
+    * **Grid and emission-compliance monitoring** — exceeding the network operator's emission or power-quality tolerances carries
+      operational or contractual cost, and the same high-bandwidth spectral view supports staying inside them. GREMLIN rides on a
+      problem the facility already owns.
+    * **Avoided per-device metering — capital, calibration, and embodied carbon.** Instrumenting every load individually multiplies
+      cabling, calibration, network endpoints, embedded firmware, and the embodied-carbon footprint of all the added electronics.
+      GREMLIN avoids that.
+    * **Maintenance-logistics dividends** — just-in-time spares, remote triage of which device is failing before sending a
+      technician, and deferred replacement-capex follow from knowing which device is degrading well before it fails.
 
 ## Where it applies — application domains
 
@@ -68,7 +68,7 @@ Home and small-business deployments are not within the scope of the present proj
 released under free and open licence terms, and the project is open to engagement with industrial partners interested in
 adapting the approach to other application domains.
 
-## 6. Honest Framing of Magnitudes and Maturity
+## Honest Framing of Magnitudes and Maturity
 
 !!! note "Absolute MWh / € figures are an iRIS-GREMLIN deliverable"
 

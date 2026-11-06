@@ -1,0 +1,21 @@
+format: gr4-presentation/1
+title: GREMLIN — Finding What Machines Don't Tell You
+entry: talk.md               # the GNU Radio European Days 2026 talk (10 min)
+
+sizes: { title: 27pt, subtitle: 21pt, body: 18pt, caption: 12pt, floor: 11pt }
+colours: { text: { light: "#000000", dark: "#ffffff" } }   # the ink follows the master under the box, not the system scheme
+steps: { in: fade, dur: 0.3s }                             # every `:::step` and pause fades in
+fonts: { hand: fonts/PatrickHand-Regular.ttf }             # `{font=hand}`: Patrick Hand, SIL OFL (fonts/PatrickHand-OFL.txt)
+
+# every slide takes `default` unless its heading names another: `{master=double}`
+masters:
+  default: figures/master-main.svg
+  double: figures/master-double.svg
+  blank: figures/master-blank.svg
+  title: figures/master-title.svg
+  title-logo: figures/master-title-logo.svg
+
+export: { dpi: 150 }   # PDF export: pictures down-sampled to at most 150 dpi on the page (scripts/talk_pdfs.sh)
+
+viewer:
+  minimumVersion: "0.1"

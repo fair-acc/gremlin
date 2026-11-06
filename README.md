@@ -42,7 +42,7 @@ It is a *diagnostic layer, not an energy controller*: it surfaces where action i
 <img width="75%" src="docs/photos/gremlin_pulsedpower_spectrogram.png" alt="PulsedPowerDemo current-spectrum spectrogram">
 </div>
 
-For full documentation see: [https://fair-acc.github.io/gremlin/](https://fair-acc.github.io/gremlin/)
+For full documentation see: [https://fair-acc.github.io/gremlin/](https://fair-acc.github.io/gremlin/) · talks and slides: [https://fair-acc.github.io/gremlin/talks/](https://fair-acc.github.io/gremlin/talks/)
 
 ## What it provides
 
@@ -70,7 +70,8 @@ It builds on the FAIR-ACC open stack, with models exchanged in the portable **ON
 
 Unless otherwise noted:<br>
 `SPDX-License-Identifier: LGPL-3.0-or-later WITH LGPL-3.0-linking-exception` &<br>
-`SPDX-License-Identifier: CC-BY-SA-4.0`
+`SPDX-License-Identifier: CC-BY-SA-4.0` (documentation) &<br>
+`SPDX-License-Identifier: CC-BY-4.0` (talk slides in `talks/`; third-party pictures keep their own terms)
 
 Copyright © GSI Helmholtz Centre for Heavy Ion Research, Darmstadt, Germany<br>
 Copyright © FAIR — Facility for Antiproton and Ion Research in Europe, Darmstadt, Germany

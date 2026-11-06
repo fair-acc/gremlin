@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1600 900" width="1600" height="900">
+  <title>title master: iRIS navy, conference banner, title, emblem, authors, white funding box, FAIR/GSI logos</title>
+  <rect x="0" y="0" width="1600" height="900" fill="#0f124a"/>
+  <g id="top">
+    <rect x="0" y="0" width="1600" height="200" fill="#0f124a"/>
+    <rect id="logo" data-present="image" x="1120" y="14" width="463" height="220" fill="none"/>
+    <rect id="title" data-present="markdown" x="78" y="11" width="1025" height="180" fill="none"/>
+    <rect id="content" data-present="markdown" x="144" y="74" width="1308" height="760" fill="none"/>
+  </g>
+  <g id="middle">
+    <rect x="0" y="200" width="1600" height="670" fill="#0f124a"/>
+    <rect x="88" y="749" width="1134" height="108" rx="6" fill="#ffffff"/>
+    <rect id="emblem" data-present="image" x="587" y="277" width="427" height="209" fill="none"/>
+    <rect id="authors" data-present="markdown" x="166" y="680" width="1397" height="63" fill="none"/>
+    <rect id="eu_flag_box" data-present="image" x="105" y="763" width="120" height="80" fill="none"/>
+    <rect id="funding" data-present="markdown" x="242" y="759" width="966" height="98" fill="none"/>
+    <rect id="fairgsi" data-present="image" x="1311" y="814" width="269" height="68" fill="none"/>
+  </g>
+  <g id="bottom">
+    <rect x="0" y="870" width="1600" height="30" fill="#0f124a"/>
+  </g>
+</svg>

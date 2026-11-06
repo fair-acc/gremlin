@@ -1,0 +1,5 @@
+gr4-present web viewer (minimal), vendored by scripts/update_viewer.sh on 2026-11-13
+release: latest  https://github.com/RalphSteinhagen/gr4-present/releases/tag/latest
+commit:  a65dc67face2d899b6183958d6f5f95760f48101  https://github.com/RalphSteinhagen/gr4-present/commit/a65dc67face2d899b6183958d6f5f95760f48101
+archive: gr4-present-web-minimal-latest.tar.gz  sha256 956c476bd6bc9bc83926980e2da1d8dc5fcbb175ea671155a497b58ac78263b2
+licence: GPL-3.0-or-later (LICENSES/GPL-3.0-or-later.txt), (C) R. J. Steinhagen, GSI/FAIR

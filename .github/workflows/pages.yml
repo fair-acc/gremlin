@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "docs/**"
+      - "talks/**"
       - "mkdocs.yml"
       - "requirements.txt"
       - ".github/workflows/pages.yml"
@@ -37,6 +38,13 @@ jobs:
 
       - name: Build site
         run: mkdocs build --site-dir site
+
+      # the decks are served as plain files next to the docs' Talks page (talks.md → site/talks/index.html), so that
+      # the gr4-present viewer can read them: ?presentation=https://fair-acc.github.io/gremlin/talks/<deck>/
+      - name: Add the talk decks
+        run: |
+          cp -r talks/. site/talks/
+          rm site/talks/README.md   # the how-to for contributors stays in the repository
 
       - uses: actions/configure-pages@v5
 

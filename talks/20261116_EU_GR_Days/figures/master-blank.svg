@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1600 900" width="1600" height="900">
+  <title>blank master: white, content over the whole page</title>
+  <rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+  <g id="top">
+    <rect x="0" y="0" width="1600" height="120" fill="#ffffff"/>
+    <rect id="content" data-present="markdown" x="34" y="34" width="1531" height="789" fill="none"/>
+  </g>
+  <g id="middle">
+    <rect x="0" y="120" width="1600" height="680" fill="#ffffff"/>
+  </g>
+  <g id="bottom">
+    <rect x="0" y="800" width="1600" height="100" fill="#ffffff"/>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+# Zenodo record of this talk, read by scripts/zenodo_talks.py (its header explains the workflow).
+# creators, grants and keywords come from the repository's .zenodo.json unless named here; upload type, licence
+# (cc-by-4.0), language, the iRIS community and the link to the live slides are set by the script. Any other Zenodo
+# deposit field may be added.
+title: "GREMLIN — Finding What Machines Don't Tell You"
+description: >-
+  <p>Passive RF diagnostics and machine-state inference at FAIR. A 10-minute show-and-tell at the European GNU Radio
+  Days 2026, Rennes.</p>
+  <p>GREMLIN explores how much can be learned about complex small- and large-scale infrastructure and technical
+  systems from the emitted RF signals they already produce. The talk presents ongoing work at FAIR as part of the EU
+  iRIS project, combining high-rate RF signal acquisition, modern C++/DSP, time-series replay and
+  machine-learning-assisted inference to detect hidden states, anomalies and correlations across distributed
+  equipment, using maintainable, software-defined instrumentation based on GNU Radio 4.0.</p>
+  <p>The record holds the slides as PDF, one page per slide and one page per step, and the gr4-present deck itself
+  (zip, with speaker notes).</p>
+publication_date: 2026-11-16
+conference_title: European GNU Radio Days 2026
+conference_dates: 16–18 November 2026
+conference_place: Rennes, France
+conference_session: Methodology
+conference_url: https://gnuradiodays.sciencesconf.org/
+notes: >-
+  Slides: CC-BY-4.0, GSI/FAIR. Third-party pictures keep their own terms (media/CREDITS.md in the archive).
+
+# the gr4-present viewer the live slides open in: talks/viewer/<commit>/, vendored by scripts/update_viewer.sh
+viewer: "a65dc67"
+
+# on Zenodo only, not in git: scripts/talk_pdfs.sh exports them, `scripts/zenodo_talks.py upload` puts them in the draft
+files:
+  - 20261116_EU_GR_Days_slides.pdf
+  - 20261116_EU_GR_Days_steps.pdf
+
+# state, written by `scripts/zenodo_talks.py reserve`; commit it
+record_id: 24059478
+doi: "10.5281/zenodo.24059478"
+sandbox_record_id: 637463
+sandbox_doi: "10.5281/zenodo.637463"

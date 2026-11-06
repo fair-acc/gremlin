@@ -17,6 +17,14 @@ statuses:
 ignore_labels:
   - restyled-ignore
 
+# the defaults plus the gr4-present decks, which keep their own Markdown dialect and layout
+exclude:
+  - "**/*.patch"
+  - "**/node_modules/**/*"
+  - "**/vendor/**/*"
+  - ".github/workflows/**/*"
+  - "talks/**/*"
+
 restylers_version: stable
 
 restylers:

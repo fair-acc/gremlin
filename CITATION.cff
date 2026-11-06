@@ -2,8 +2,12 @@ cff-version: 1.2.0
 title: "GREMLIN — GReen Energy Monitoring for Large INfrastructure"
 message: >
   If you use this software or its accompanying documentation, please cite it using the metadata in this file.
+  Software: LGPL-3.0-or-later WITH LGPL-3.0-linking-exception; documentation: CC-BY-SA-4.0; talk slides: CC-BY-4.0.
 type: software
-license: LGPL-3.0-or-later WITH LGPL-3.0-linking-exception
+version: "0.2.0"
+date-released: "2026-11-16"
+# CFF takes only a plain SPDX ID; the full expression is LGPL-3.0-or-later WITH LGPL-3.0-linking-exception (LICENSES/)
+license: LGPL-3.0-or-later
 repository-code: "https://github.com/fair-acc/gremlin"
 doi: "10.5281/zenodo.20520246"
 keywords:
@@ -25,7 +29,7 @@ keywords:
 authors:
   - family-names: Steinhagen
     given-names: Ralph J.
-    affiliation: "GSI Helmholtzzentrum für Schwerionenforschung"
+    affiliation: "GSI Helmholtzzentrum für Schwerionenforschung / FAIR"
     orcid: "https://orcid.org/0009-0009-8537-7029"
   - family-names: Krimm
     given-names: Alexander
@@ -49,6 +53,8 @@ identifiers:
 references:
   - type: software
     title: "pulsed-power-ml"
+    authors:
+      - name: "GSI/FAIR pulsed-power-ml contributors"
     repository-code: "https://github.com/fair-acc/pulsed-power-ml"
     notes: >
       Earlier proof-of-concept exploring power-disaggregation and

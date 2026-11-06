@@ -1,0 +1,55 @@
+name: Archive talks on Zenodo
+
+# one Zenodo record (and DOI) per talks/<dir>/zenodo.yml; see scripts/zenodo_talks.py
+on:
+  release:
+    types: [published] # also fires for pre-releases; a release made with GITHUB_TOKEN does not trigger this
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "plan (dry run), check (tests the token), reserve (prints the sidecar lines to commit) or publish"
+        type: choice
+        options: [plan, check, reserve, publish]
+        default: plan
+      talks:
+        description: "talk directories, space-separated (empty: every talk with a zenodo.yml; reserve needs them)"
+        type: string
+        default: ""
+      sandbox:
+        description: "use sandbox.zenodo.org"
+        type: boolean
+        default: true
+      draft_only:
+        description: "publish: upload but leave the drafts for a manual click"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zenodo-talks
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - run: pip install pyyaml
+
+      - name: Archive
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          ZENODO_SANDBOX_TOKEN: ${{ secrets.ZENODO_SANDBOX_TOKEN }}
+          MODE: ${{ inputs.mode || 'publish' }}
+          TALKS: ${{ inputs.talks }}
+          SANDBOX: ${{ inputs.sandbox && '--sandbox' || '' }}
+          DRAFT_ONLY: ${{ inputs.draft_only && '--draft-only' || '' }}
+        # $TALKS, $SANDBOX and $DRAFT_ONLY are unquoted on purpose: they split into arguments or vanish
+        run: python scripts/zenodo_talks.py "$MODE" $TALKS $SANDBOX $DRAFT_ONLY --ref "$GITHUB_SHA"

@@ -4,7 +4,13 @@
   "license": {
     "id": "LGPL-3.0-or-later"
   },
+  "notes": "Software: LGPL-3.0-or-later WITH LGPL-3.0-linking-exception. Documentation: CC-BY-SA-4.0. Talk slides (talks/): CC-BY-4.0. Third-party pictures keep their own terms (see each talk's media/CREDITS.md).",
   "upload_type": "software",
+  "grants": [
+    {
+      "id": "10.13039/501100000780::101275935"
+    }
+  ],
   "creators": [
     {
       "name": "Steinhagen, Ralph J.",
@@ -47,6 +53,11 @@
     "iRIS"
   ],
   "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24059478",
+      "relation": "isSupplementedBy",
+      "resource_type": "presentation"
+    },
     {
       "identifier": "https://github.com/fair-acc/pulsed-power-ml",
       "relation": "continues",

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1600 900" width="1600" height="900">
+  <title>title master without the funding box, for the GREMLIN logo and questions slides</title>
+  <rect x="0" y="0" width="1600" height="900" fill="#0f124a"/>
+  <g id="top">
+    <rect x="0" y="0" width="1600" height="200" fill="#0f124a"/>
+    <rect id="logo" data-present="image" x="1120" y="14" width="463" height="220" fill="none"/>
+    <rect id="title" data-present="markdown" x="78" y="11" width="1025" height="180" fill="none"/>
+    <rect id="content" data-present="markdown" x="144" y="74" width="1308" height="760" fill="none"/>
+    <rect id="gremlin" data-present="image" x="302" y="136" width="994" height="639" fill="none"/>
+  </g>
+  <g id="middle">
+    <rect x="0" y="200" width="1600" height="670" fill="#0f124a"/>
+    <rect id="tagline" data-present="markdown" x="17" y="817" width="1274" height="77" fill="none"/>
+    <rect id="eu_flag_footer" data-present="image" x="14" y="843" width="71" height="49" fill="none"/>
+    <rect id="fairgsi" data-present="image" x="1311" y="814" width="269" height="68" fill="none"/>
+  </g>
+  <g id="bottom">
+    <rect x="0" y="870" width="1600" height="30" fill="#0f124a"/>
+  </g>
+</svg>

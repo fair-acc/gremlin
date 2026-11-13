@@ -28,7 +28,8 @@ Each talk can get its own Zenodo DOI (type *presentation*), linked to the softwa
    Needs a current gr4-present build (`GR4_PRESENT_BIN`). Names under `files:` in `zenodo.yml`. A later deck
    change makes them stale: export and upload again.
 5. **Merge** to `main`. Live slides, in the viewer that `viewer:` in `zenodo.yml` names:
-   `https://fair-acc.github.io/gremlin/talks/viewer/<viewer>/?presentation=../../<talk>`
+   `https://fair-acc.github.io/gremlin/talks/<talk>/` (the Zenodo record links the same deck as
+   `https://fair-acc.github.io/gremlin/talks/viewer/<viewer>/?presentation=../../<talk>`)
 6. **Publish** before the talk (a reserved DOI does not resolve yet): the next GitHub release, or Actions →
    *Archive talks on Zenodo* → mode `publish`, the talk, *sandbox* unticked.
 7. **Verify** `https://doi.org/<doi>`: two PDFs, deck zip, live-slides link.
@@ -49,6 +50,10 @@ scripts/update_viewer.sh v0.2.0 full   # a tagged release; full adds live GNU Ra
 Minimal suffices for a deck without live charts. Name the folder as `viewer: "<commit>"` in the talk's `zenodo.yml`
 once the deck looks right in it (export the PDFs with a native build of the same commit); remove a folder once no
 talk names it.
+
+On the site, the Pages workflow also puts that viewer into the talk's own folder, with the deck beside it as `default/`
+(what the viewer opens without `?presentation=`, as gr4-present's demo site does), so `talks/<talk>/` opens the talk.
+This happens at build time only: the talk's folder in git, and so the deck archived on Zenodo, stays as it is.
 
 ## Tokens
 

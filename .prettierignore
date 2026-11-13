@@ -1,2 +1,6 @@
 # gr4-present decks: their own Markdown dialect (`:::` boxes, `[text]{attrs}`, aligned index.yml comments)
 talks/
+# verbatim copies from GR4, re-synced with each GR4 bump (AGENTS.md)
+CORE_*.md
+CODE_OF_CONDUCT.md
+.claude/commands/

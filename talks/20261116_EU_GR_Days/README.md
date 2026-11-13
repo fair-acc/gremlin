@@ -2,6 +2,8 @@
 
 # GREMLIN — Finding What Machines Don’t Tell You
 
+The slides are live at [https://fair-acc.github.io/gremlin/talks/20261116_EU_GR_Days](https://fair-acc.github.io/gremlin/talks/20261116_EU_GR_Days) and PDFs etc. [here](https://fair-acc.github.io/gremlin/talks/).
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24059478.svg)](https://doi.org/10.5281/zenodo.24059478)
 
 _Passive RF diagnostics and machine-state inference at FAIR_

@@ -52,7 +52,11 @@ REPO_URL = "https://github.com/fair-acc/gremlin"
 PAGES_URL = "https://fair-acc.github.io/gremlin"
 VIEWER_URL = "https://ralphsteinhagen.github.io/gr4-present/"  # for a deck whose zenodo.yml names no vendored `viewer:`
 CONCEPT_DOI = "10.5281/zenodo.20520246"  # the software's concept DOI: always resolves to the latest release
-COMMUNITY = "101275935"  # iRIS, https://zenodo.org/communities/101275935/
+# each publish asks these to include the record; their curators accept it (https://zenodo.org/communities/<id>/)
+COMMUNITIES = (
+    "101275935",  # iRIS
+    "gsi-fair",  # GSI/FAIR
+)
 USER_AGENT = f"gremlin-zenodo-talks/1.0 (+{REPO_URL})"
 INHERITED = (
     "creators",
@@ -204,8 +208,8 @@ class Talk:
             license="cc-by-4.0",
             language="eng",
         )
-        if not self.sandbox:  # the community exists on zenodo.org only
-            meta["communities"] = [{"identifier": COMMUNITY}]
+        if not self.sandbox:  # the communities exist on zenodo.org only
+            meta["communities"] = [{"identifier": c} for c in COMMUNITIES]
         meta.update({k: v for k, v in self.meta.items() if k not in SIDECAR_ONLY})
         # YAML reads a bare date as datetime.date
         meta["publication_date"] = str(meta.get("publication_date", ""))

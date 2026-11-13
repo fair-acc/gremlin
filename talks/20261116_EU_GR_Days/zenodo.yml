@@ -1,7 +1,7 @@
 # Zenodo record of this talk, read by scripts/zenodo_talks.py (its header explains the workflow).
 # creators, grants and keywords come from the repository's .zenodo.json unless named here; upload type, licence
-# (cc-by-4.0), language, the iRIS community and the link to the live slides are set by the script. Any other Zenodo
-# deposit field may be added.
+# (cc-by-4.0), language, the iRIS and GSI/FAIR communities and the link to the live slides are set by the script. Any
+# other Zenodo deposit field may be added.
 title: "GREMLIN — Finding What Machines Don't Tell You"
 description: >-
   <p>Passive RF diagnostics and machine-state inference at FAIR. A 10-minute show-and-tell at the European GNU Radio

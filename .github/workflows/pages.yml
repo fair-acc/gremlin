@@ -46,6 +46,30 @@ jobs:
           cp -r talks/. site/talks/
           rm site/talks/README.md   # the how-to for contributors stays in the repository
 
+      # talks/<talk>/ opens the talk by itself, laid out as gr4-present's deck-site action lays out a deck: the viewer
+      # that `viewer:` in its zenodo.yml names beside it, and the deck as default/, which the viewer opens without a
+      # ?presentation=. The deck stays at talks/<talk>/ as well, since published Zenodo records link to
+      # talks/viewer/<viewer>/?presentation=../../<talk>; assembled here rather than in git, so the deck archived on
+      # Zenodo and the fingerprint of its PDFs stay as they are
+      - name: Put each talk's viewer beside it
+        run: |
+          site=https://fair-acc.github.io/gremlin/talks
+          for sidecar in talks/*/zenodo.yml; do
+            name=$(basename "$(dirname "$sidecar")")
+            viewer=$(sed -n 's/^viewer:[[:space:]]*"\{0,1\}\([0-9a-f]\{7,40\}\)"\{0,1\}[[:space:]]*$/\1/p' "$sidecar")
+            [ -n "$viewer" ] || continue
+            dest=site/talks/$name
+            [ -d "talks/viewer/$viewer" ] || { echo "::error::$sidecar names viewer $viewer, but talks/viewer/$viewer/ is missing"; exit 1; }
+            [ ! -e "$dest/index.html" ] && [ ! -e "$dest/default" ] || { echo "::error::talks/$name has its own index.html or default/"; exit 1; }
+            cp -r "talks/$name" "$dest/default"
+            for file in index.html index.js index.wasm gr4-serviceworker.js manifest.webmanifest icon.png; do
+              cp "talks/viewer/$viewer/$file" "$dest/"
+            done
+            sed -i "s|<meta name=\"gr4-site\" content=\"[^\"]*\" />|<meta name=\"gr4-site\" content=\"$site/$name/\" />|" "$dest/index.html"
+            grep -q "content=\"$site/$name/\"" "$dest/index.html" || { echo "::error::$dest/index.html has no gr4-site address to replace"; exit 1; }
+            echo "$site/$name/: viewer $viewer, the deck as default/"
+          done
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
